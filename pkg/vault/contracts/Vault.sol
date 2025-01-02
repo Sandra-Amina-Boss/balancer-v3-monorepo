@@ -60,7 +60,7 @@ contract Vault is IVaultMain, VaultCommon, Proxy {
     constructor(IVaultExtension vaultExtension, IAuthorizer authorizer, IProtocolFeeController protocolFeeController) {
         if (address(vaultExtension.vault()) != address(this)) {
             revert WrongVaultExtensionDeployment();
-        }
+        } 
 
         if (address(protocolFeeController.vault()) != address(this)) {
             revert WrongProtocolFeeControllerDeployment();
